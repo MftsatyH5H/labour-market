@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Labour Market Analysis Dashboard</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-3" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li
+            (click)="selectedButton = 'KPIs'"
+            [ngClass]="{ 'active-nav-item': selectedButton === 'KPIs' }"
+            class="nav-item"
+          >
+            <a class="nav-link" aria-current="page" href="#">KPIs</a>
+          </li>
+          <li
+            (click)="selectedButton = 'bigData'"
+            [ngClass]="{ 'active-nav-item': selectedButton === 'bigData' }"
+            class="nav-item"
+          >
+            <a class="nav-link" aria-current="page" href="#">Big Data</a>
+          </li>
+          <li
+            (click)="selectedButton = 'tae'"
+            [ngClass]="{ 'active-nav-item': selectedButton === 'tae' }"
+            class="nav-item"
+          >
+            <a class="nav-link" aria-current="page" href="#">Training and Education</a>
+          </li>
+          <li
+            (click)="selectedButton = 'researchOutput'"
+            [ngClass]="{ 'active-nav-item': selectedButton === 'researchOutput' }"
+            class="nav-item"
+          >
+            <a class="nav-link" aria-current="page" href="#">Research Output</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  @if(selectedButton === 'KPIs'){
+    <iframe class="iframe-dashboard" title="KPI12" src="https://app.powerbi.com/view?r=eyJrIjoiZDA1ZmUxM2MtMjAxYi00ZDRhLWJlZGItNDczZWNmMzc1M2YxIiwidCI6IjJhMzBiYzY5LWRmZGItNGU1My1hZWFlLTUzMDY5NmYyYzU0OCJ9" frameborder="0" allowFullScreen="true"></iframe>
+  }
+  @if(selectedButton === 'bigData'){
+    <iframe title="BIGDATA" class="iframe-dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiNmMyOWIzYmQtOWYwNS00ZDVkLTkxYmMtZjgyMjAxMzgzMGNiIiwidCI6IjJhMzBiYzY5LWRmZGItNGU1My1hZWFlLTUzMDY5NmYyYzU0OCJ9" frameborder="0" allowFullScreen="true"></iframe>
+  }
+  @if(selectedButton === 'tae'){
+    <iframe class="iframe-dashboard" title="Training and Education" src="https://app.powerbi.com/view?r=eyJrIjoiYjBiZmNhMjItOTI5Ni00ZThlLWI0NDUtMGRmN2UzMGUwZmMyIiwidCI6IjJhMzBiYzY5LWRmZGItNGU1My1hZWFlLTUzMDY5NmYyYzU0OCJ9" frameborder="0" allowFullScreen="true"></iframe>
+  }
+  @if(selectedButton === 'researchOutput'){
+    <iframe title="Research Output II" class="iframe-dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiMGRhNDQ2NzgtNjI1MC00N2Y2LTk1NTMtMmY4MTkzZTJmZDM2IiwidCI6IjJhMzBiYzY5LWRmZGItNGU1My1hZWFlLTUzMDY5NmYyYzU0OCJ9" frameborder="0" allowFullScreen="true"></iframe>
+  }

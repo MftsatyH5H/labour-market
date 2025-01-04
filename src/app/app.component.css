@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+nav {
+  background-color: #2864a3 !important; /* A slightly muted vibrant blue */
+  height: 50px;
+}
+.nav-link{
+  color: #F6F6F6 !important;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.active-nav-item a {
+  color: #f0c14b !important; /* A warm, golden-yellow for contrast */
+  font-weight: bold; /* Make it bold for emphasis */
+  text-decoration: underline; /* Optional: adds more visual distinction */
+}
+
+.container-fluid .navbar-brand {
+  margin-left: 30px;
+  color: white;
+  font-weight: 600;
+  
+}
+
+/* Basic styles for the neon text */
+.neon-text {
+  font-size: 1.2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.neon-text span {
+  opacity: 1;
+}
+
+/* Adjust the iframe */
+.iframe-dashboard {
+  width: 100vw;
+  height: calc(100vh - 50px); /* Subtract the height of the navbar */
+  display: block;
+  border: none;
+}

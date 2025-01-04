@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  client:
+    image: ${HUB_URL}/${APP_NAME}:${APP_VERSION}
+    container_name: camel-fe
+    build: .
+    ports:
+      - '4200:4200'
+    env_file: 
+      - .env
+    environment:
+      - BACKEND_URL=${BACKEND_URL}
+    volumes:
+      - ./:/angular-startup
